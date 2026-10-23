@@ -56,3 +56,33 @@ body {
   width: 70%;
   padding: 3rem;
 }
+
+.encabezado,
+.bloque {
+  margin-bottom: 2rem;
+}
+
+.grilla-habilidades,
+.lista-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.habilidad,
+.proyecto {
+  padding: 1rem;
+  border: 1px solid #cccccc;
+}
+
+.formacion,
+.proyecto-tecnologias,
+.lista-contactos {
+  list-style: none;
+}
+
+.proyecto-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
