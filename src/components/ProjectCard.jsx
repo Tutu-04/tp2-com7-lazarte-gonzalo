@@ -1,4 +1,8 @@
-function ProjectCard({ titulo, estado, descripcion, tecnologias }) {
+import { useState } from "react";
+
+function ProjectCard({ titulo, estado, descripcion, detalle, tecnologias }) {
+  const [verDetalle, setVerDetalle] = useState(false);
+
   return (
     <article className="proyecto">
       {estado && <span className="proyecto-estado">{estado}</span>}
@@ -10,6 +14,12 @@ function ProjectCard({ titulo, estado, descripcion, tecnologias }) {
           <li key={tecnologia}>{tecnologia}</li>
         ))}
       </ul>
+
+      {verDetalle && <p className="proyecto-detalle">{detalle}</p>}
+
+      <button type="button" className="boton-texto" onClick={() => setVerDetalle(!verDetalle)}>
+        {verDetalle ? "Ocultar detalle" : "Ver detalle"}
+      </button>
     </article>
   );
 }

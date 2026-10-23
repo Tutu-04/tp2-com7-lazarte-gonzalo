@@ -14,6 +14,7 @@ function Projects() {
             titulo={proyecto.titulo}
             estado={proyecto.estado}
             descripcion={proyecto.descripcion}
+            detalle={proyecto.detalle}
             tecnologias={proyecto.tecnologias}
           />
         ))}

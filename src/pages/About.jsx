@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Header from "../components/Header.jsx";
 import { formacion } from "../data/formacion.js";
 
 function About() {
+  const [mostrarExperiencia, setMostrarExperiencia] = useState(false);
+
   return (
     <section>
       <Header titulo="Sobre mí" bajada="Quién soy, qué me interesa y qué estudié." />
@@ -12,6 +15,22 @@ function About() {
           Soy de San Miguel de Tucumán y estoy en el último cuatrimestre de la Tecnicatura
           Universitaria en Programación de la UTN.
         </p>
+
+        {mostrarExperiencia && (
+          <p className="bloque-extra">
+            Desde 2022 trabajo de forma independiente haciendo mantenimiento, reparación y armado
+            de computadoras y consolas. También doy clases particulares de programación y
+            matemática.
+          </p>
+        )}
+
+        <button
+          type="button"
+          className="boton-texto"
+          onClick={() => setMostrarExperiencia(!mostrarExperiencia)}
+        >
+          {mostrarExperiencia ? "Ocultar mi experiencia" : "Ver mi experiencia"}
+        </button>
       </div>
 
       <div className="bloque">

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Ornamento from "./Ornamento.jsx";
 
 const secciones = [
   { ruta: "/", texto: "Inicio" },
@@ -28,7 +29,10 @@ function Sidebar({ nombre, profesion }) {
         </ul>
       </nav>
 
-      <p className="sidebar-lugar">San Miguel de Tucumán, Argentina</p>
+      <div className="sidebar-pie">
+        <Ornamento />
+        <p className="sidebar-lugar">San Miguel de Tucumán, Argentina</p>
+      </div>
     </aside>
   );
 }
